@@ -1,3 +1,26 @@
+zf260224.2106
+
+Afin de pouvoir terminer le _build_, il manque la commande bash: _mklittlefs_
+
+Ce n'est pas facile de l'installer, il est BEAUCOUP plus simple de le demander à l'agent Copilot avec:
+
+```
+installe mklittlefs et vérifie que je puisse bien terminer le build
+```
+
+J'ai utilisé comme modèle: Raptor mini (Preview)
+
+Aussi, si on travail dans un _dev container_, fortement conseillé quand on utilise un agent IA, on ne pourra pas _flasher_ le device car le port USB n'est pas retransmi dans le _dev container_.<br>
+Donc pour le flashing, il faut sortir du dev container (Close Remote Connetion).
+
+Et encore, la commande _pio_ ou _platformio_ dans le terminal, cela ne fonctionne pas dans le dev container et de plus il ne faut pas ouvrir le _terminal_ depuis le menu _Terminal_ mais depuis la _Commande Palette / Platformio: New terminal_
+
+Des fois on en a besoin quand on veux effacer le device avant de le flasher, on utilise alors cette commande:
+
+```
+pio run --target erase
+```
+
 <div align="center" markdown="1">
 
 <img src=".github/meshtastic_logo.png" alt="Meshtastic Logo" width="80"/>
